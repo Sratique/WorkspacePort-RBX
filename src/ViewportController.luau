@@ -134,7 +134,7 @@ function VirtualWorkspace.New(
 
 	--Modify the current behavior of the existing ViewportFrame
 	ExistingViewport.ChildAdded:Connect(function(Child: Instance)
-		if Child:IsA("GuiBase2d") then
+		if Child:IsA("GuiBase2d") or Child:IsA("WorldModel") then
 			return
 		end
 		Child.Parent = WorkspaceWorldModel
